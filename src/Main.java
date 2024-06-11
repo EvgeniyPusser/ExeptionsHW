@@ -50,20 +50,20 @@ public class Main {
 //            throw new IOException("Вы ввели неправильное отчество.");
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
-            String birthDate = String.valueOf(simpleDateFormat.parse(data[3]));
+            String birthDate = String.valueOf(simpleDateFormat.parse(birth_date));
         } catch (ParseException e) {
             System.out.println("Вы неправильно ввели дату своего рождения.");
             return;
         }
 
         try {
-            long telephoneNumber = Long.parseLong(data[4]);
+            long telephoneNumber = Long.parseLong(phoneNumber);
         } catch (NumberFormatException g) {
             System.out.println("Вы неправильно ввели свой номер телефона.");
             return;
         }
 
-        if (!data[5].equals("m") && !data[5].equals("f"))
+        if (!gender.equals("m") && !gender.equals("f"))
             throw new IOException("Введите m, если Вы мужчина, и f, если Вы женщина.");
 
         //String family_name = data[0];
