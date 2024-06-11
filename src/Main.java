@@ -26,7 +26,6 @@ public class Main {
             throw new FormatExeptionMinus();
 
 
-
         String family_name = data[0];
         String name = data[1];
         String father_name = data[2];
@@ -41,13 +40,7 @@ public class Main {
         if (!matches)
             throw new nameChecker();
 
-        //if(containLetters(data[0])){
-        //throw new IOException("Вы ввели неправильную фамилию.");
-        //if (containLetters(data[1]))
-        //throw new IOException("Вы ввели неправильное имя.");
-//
-//        if(containLetters(data[2]))
-//            throw new IOException("Вы ввели неправильное отчество.");
+
         try {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy");
             String birthDate = String.valueOf(simpleDateFormat.parse(birth_date));
@@ -88,12 +81,9 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-//    public static boolean containLetters(String string) {
-//        return Pattern.matches("[а-яА-ЯёЁ] + ", string);
-//    }
 
-
-    }}
+    }
+}
 
 
 
